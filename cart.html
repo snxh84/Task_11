@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Thala 7 Sneaker Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand">Thala<span>7.</span></a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Brands <i class="caret"></i></a>
+        <a href="#">More <i class="caret"></i></a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.7" y2="16.7"></line>
+          </svg>
+          <input type="search" placeholder="Search">
+        </div>
+
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+
+        <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="Profile">
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="cart-section" id="cart">
+      <div class="container">
+        <h1 class="page-title">Shopping Cart</h1>
+
+        <div class="cart-grid">
+          <!-- Cart table -->
+          <div class="cart-main">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="cart-name">Seven By M.S.Dhoni W...</span></td>
+                  <td>
+                    <div class="mini-qty">
+                      <button type="button" aria-label="Decrease">&minus;</button>
+                      <output>1</output>
+                      <button type="button" aria-label="Increase">+</button>
+                    </div>
+                  </td>
+                  <td><span class="line-price">₹4,999</span></td>
+                  <td>
+                    <button type="button" class="remove-btn" aria-label="Remove item">&times;</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="cart-name">Seven By M.S.Dhoni W...</span></td>
+                  <td>
+                    <div class="mini-qty">
+                      <button type="button" aria-label="Decrease">&minus;</button>
+                      <output>1</output>
+                      <button type="button" aria-label="Increase">+</button>
+                    </div>
+                  </td>
+                  <td><span class="line-price">₹4,999</span></td>
+                  <td>
+                    <button type="button" class="remove-btn" aria-label="Remove item">&times;</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="cart-name">Seven By M.S.Dhoni W...</span></td>
+                  <td>
+                    <div class="mini-qty">
+                      <button type="button" aria-label="Decrease">&minus;</button>
+                      <output>1</output>
+                      <button type="button" aria-label="Increase">+</button>
+                    </div>
+                  </td>
+                  <td><span class="line-price">₹4,999</span></td>
+                  <td>
+                    <button type="button" class="remove-btn" aria-label="Remove item">&times;</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <a href="product.html" class="continue-link">&lsaquo;&nbsp; Continue Shopping</a>
+          </div>
+
+          <!-- Coupon + totals card -->
+          <aside class="cart-side">
+            <div class="summary-card">
+              <span class="card-label">Enter Coupon Code</span>
+
+              <div class="coupon-row">
+                <input type="text" placeholder="COUPON CODE" aria-label="Coupon code">
+                <button type="button" class="btn btn-blue">Apply Coupon</button>
+              </div>
+
+              <div class="total-lines">
+                <div class="row"><span>Sub Total</span><span>₹4,700</span></div>
+                <div class="row"><span>Taxes(if applicable)</span><span>₹199</span></div>
+                <div class="row"><span>Discount</span><span>₹0</span></div>
+                <div class="row grand"><span>Total</span><span>₹4,999</span></div>
+              </div>
+            </div>
+
+            <a href="payment.html" class="pay-btn">Pay Now ₹4,999</a>
+
+            <div class="trust-row">
+              <span class="trust-badge secure">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"></path>
+                </svg>
+                SSL SECURE
+              </span>
+              <span class="trust-badge rzp"><i></i> Razorpay</span>
+              <span class="trust-badge mc">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                  <line x1="2" y1="10" x2="22" y2="10"></line>
+                </svg>
+                VISA
+              </span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

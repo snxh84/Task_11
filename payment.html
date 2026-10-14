@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - Thala 7 Sneaker Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand">Thala<span>7.</span></a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Brands <i class="caret"></i></a>
+        <a href="#">More <i class="caret"></i></a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="search-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.7" y2="16.7"></line>
+          </svg>
+          <input type="search" placeholder="Search">
+        </div>
+
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge">0</span>
+        </a>
+
+        <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="Profile">
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="checkout-section" id="checkout">
+      <div class="container">
+        <p class="checkout-label">Checkout</p>
+
+        <div class="checkout-grid">
+          <!-- Left container -->
+          <div class="checkout-left">
+            <h2>Contact Details</h2>
+            <div class="field">
+              <label for="email">Email ID</label>
+              <input id="email" type="email" placeholder="John Doe">
+            </div>
+
+            <h2 class="pay-title">Payment</h2>
+            <div class="pay-box">
+
+              <!-- Payment method tabs (Flexbox) -->
+              <div class="pay-tabs" role="tablist">
+                <button type="button" class="pay-tab active" role="tab" aria-selected="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                  </svg>
+                  Card
+                </button>
+
+                <button type="button" class="pay-tab" role="tab" aria-selected="false">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 5v14M9 5h5a3 3 0 0 1 0 6H9m0 0h6a3 3 0 0 1 0 6H9M12 3v2M15 5v2M12 19v2M15 17v2M6 5v14M6 8h3M6 16h3"></path>
+                  </svg>
+                  Crypto
+                </button>
+
+                <button type="button" class="pay-tab" role="tab" aria-selected="false">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21h18M4 10h16M5 21V10m4 11V10m6 11V10m4 11V10M2 10l10-7 10 7"></path>
+                  </svg>
+                  Bank
+                </button>
+
+                <button type="button" class="pay-tab more" role="tab" aria-selected="false" aria-label="More payment options">
+                  <span>&#8942;</span>
+                </button>
+              </div>
+
+              <!-- Card details -->
+              <div class="field">
+                <label for="cardno">Card Number</label>
+                <input id="cardno" type="text" inputmode="numeric" placeholder="John Doe">
+              </div>
+
+              <div class="field-2">
+                <div class="field">
+                  <label for="exp">Expiry</label>
+                  <input id="exp" type="text" placeholder="MM/YY">
+                </div>
+                <div class="field">
+                  <label for="cvc">CVC</label>
+                  <input id="cvc" type="text" inputmode="numeric" placeholder="...">
+                </div>
+              </div>
+
+              <div class="field-2">
+                <div class="field">
+                  <label for="country">Country</label>
+                  <select id="country">
+                    <option>India</option>
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Australia</option>
+                    <option>Singapore</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="zip">ZIP</label>
+                  <input id="zip" type="text" placeholder="XXXXX">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right container : Order summary -->
+          <div class="checkout-right">
+            <h2 class="order-title">Order Summary</h2>
+
+            <div class="summary-card">
+              <span class="card-label">Enter Coupon Code</span>
+
+              <div class="coupon-row">
+                <input type="text" placeholder="COUPON CODE" aria-label="Coupon code">
+                <button type="button" class="btn btn-blue">Apply Coupon</button>
+              </div>
+
+              <div class="total-lines">
+                <div class="row"><span>Sub Total</span><span>₹4,700</span></div>
+                <div class="row"><span>Taxes(if applicable)</span><span>₹199</span></div>
+                <div class="row"><span>Discount</span><span>₹0</span></div>
+                <div class="row grand"><span>Total</span><span>₹4,999</span></div>
+              </div>
+            </div>
+
+            <a href="#" class="pay-btn">Pay Now ₹4,999</a>
+
+            <div class="trust-row">
+              <span class="trust-badge secure">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"></path>
+                </svg>
+                SSL SECURE
+              </span>
+              <span class="trust-badge rzp"><i></i> Razorpay</span>
+              <span class="trust-badge mc">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                  <line x1="2" y1="10" x2="22" y2="10"></line>
+                </svg>
+                VISA
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
